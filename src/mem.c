@@ -206,7 +206,6 @@ int free_mem(addr_t address, struct pcb_t * proc) {
 	 * 	- Remember to use lock to protect the memory from other
 	 * 	  processes.  */
 	pthread_mutex_lock(&mem_lock);	
-	int num_pages = 0;					// Number of pages we will use
 	addr_t physical_addr;
 	addr_t virtual_addr = address;
 	int i;
